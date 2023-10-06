@@ -61,7 +61,7 @@ class MainActivity : ComponentActivity() {
                     ) { padding ->
 
                         LazyVerticalGrid(
-                            columns = GridCells.Adaptive(120.dp),
+                            columns = GridCells.Adaptive(180.dp),
                             modifier = Modifier.padding(padding),
                             contentPadding = PaddingValues(4.dp)
                         ) {
