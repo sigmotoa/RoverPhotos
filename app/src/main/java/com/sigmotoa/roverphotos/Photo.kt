@@ -6,5 +6,6 @@ data class Photo(
     val id: Int,
     val img_src: String,
     val rover: Rover,
-    val sol: Int
+    val sol: Int,
+    val like: Boolean = false
 )
