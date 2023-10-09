@@ -1,7 +1,7 @@
-package com.sigmotoa.roverphotos
+package com.sigmotoa.roverphotos.data.remote
 
 data class Rover(
-    val cameras: List<CameraX>,
+    val cameras: List<Camera>,
     val id: Int,
     val landing_date: String,
     val launch_date: String,

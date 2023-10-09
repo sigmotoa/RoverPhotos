@@ -1,12 +1,10 @@
-package com.sigmotoa.roverphotos
+package com.sigmotoa.roverphotos.ui.screens.home
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.sigmotoa.roverphotos.data.local.PhotosDao
+import com.sigmotoa.roverphotos.data.remote.Photo
+import com.sigmotoa.roverphotos.data.remote.PhotosService
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
@@ -20,17 +18,19 @@ import retrofit2.converter.gson.GsonConverterFactory
  *
  * www.sigmotoa.com
  */
-class MainViewModel : ViewModel() {
+class HomeViewModel(photosDao: PhotosDao) : ViewModel() {
 
     //var state by mutableStateOf(UiState())
-
     //LiveData
 
+    //val state: LiveData<UiState> = _state
+//private val _state = MutableLiveData(UiState())
+//  private set
     //StateFlow
     private val _state = MutableStateFlow(UiState())
-
-
     val state: StateFlow<UiState> = _state
+
+
 
     init {
         viewModelScope.launch {
@@ -47,10 +47,6 @@ class MainViewModel : ViewModel() {
             )
         }
     }
-
-    //val state: LiveData<UiState> = _state
-//private val _state = MutableLiveData(UiState())
-//  private set
     fun onPhotoClick(photo: Photo) {
 
         val photos = _state.value.photos.toMutableList()

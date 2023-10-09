@@ -15,3 +15,5 @@ D
 app/build.gradle.kts,d/2/d2a4383452aad84a18429a5844d31330a012a9e6
 j
 :app/src/main/java/com/sigmotoa/roverphotos/MainActivity.kt,3/1/318a19c1b317690c45fe2570f6c850174664d441
+k
+;app/src/main/java/com/sigmotoa/roverphotos/MainViewModel.kt,9/0/9058b4d5933ae35613d55dfa5cf2fb5fbd356029

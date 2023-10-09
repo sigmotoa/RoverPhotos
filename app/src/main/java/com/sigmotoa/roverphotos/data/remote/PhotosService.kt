@@ -1,4 +1,4 @@
-package com.sigmotoa.roverphotos
+package com.sigmotoa.roverphotos.data.remote
 
 import retrofit2.http.GET
 

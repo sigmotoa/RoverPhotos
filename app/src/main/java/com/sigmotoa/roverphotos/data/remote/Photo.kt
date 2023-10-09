@@ -1,4 +1,4 @@
-package com.sigmotoa.roverphotos
+package com.sigmotoa.roverphotos.data.remote
 
 data class Photo(
     val camera: Camera,
