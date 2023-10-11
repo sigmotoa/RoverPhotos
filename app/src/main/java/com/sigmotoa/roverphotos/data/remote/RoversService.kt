@@ -1,6 +1,7 @@
 package com.sigmotoa.roverphotos.data.remote
 
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 /**
  *
@@ -13,4 +14,7 @@ interface RoversService {
 
     @GET("rovers?api_key=DEMO_KEY")
     suspend fun getRovers(): Rovers
+
+    @GET("rovers/{rover}?api_key=DEMO_KEY")
+    suspend fun getRover(@Path(value = "rover") rover:String):Rover
 }

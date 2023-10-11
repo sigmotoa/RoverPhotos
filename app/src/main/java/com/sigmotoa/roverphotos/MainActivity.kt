@@ -4,10 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.room.Room
-import com.sigmotoa.roverphotos.data.local.PhotosDatabase
 import com.sigmotoa.roverphotos.ui.screens.home.Home
-import com.sigmotoa.roverphotos.ui.screens.rover.ListRover
 
 @OptIn(ExperimentalMaterial3Api::class)
 class MainActivity : ComponentActivity() {
@@ -20,7 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 
-            ListRover()
+            Home()
             //Home(db.photosDao())
         }
 
